@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+	<title>Jukebox</title>
+</head>
+<body> 
+
+      <h1 id="SongTitle"></h1>
+      <h2 id="ArtistName"></h2>
+
+			<audio id="MyMusic" src=" " type="audio/mp3">
+		  </audio>
+
+     <button id="play" onclick="jukebox.play()" type="button">Play</button>
+
+     <!-- <button id="shuffle" onclick="jukebox.shuffle()" type="button">Shuffle</button> -->
+
+     <button id="next" onclick="jukebox.next()" type="button">Next</button>
+
+     <button id="back" onclick="jukebox.back()" type="button">Back</button>
+
+    <button id="pause" onclick="jukebox.pause()" type="button">Pause</button> 
+
+    <button id="stop" onclick="jukebox.stop()" type="button">Stop</button> 
+
+
+    <form>
+      Artist:<br>
+      <input id="artistName" type="text" name="Artist">
+      <br>
+      Song Title:<br>
+      <input id="songName" type="text" name="Song Title">
+      <br>
+      URL:<br>
+      <input id="newURL" type="text" name="URL">
+      <button id="submitSong" onclick="jukebox.addSong()" type="button">Submit</button>
+
+    </form>
+<script src="JS/Jukebox.js"></script>
+</body>
+</html>
