@@ -19,21 +19,18 @@ var Jukebox = function(){
 		this.songs = [];
 
 
-		this.preload = function(x) {
-			this.songs.push(x)
-		};
-
-
-		this.load = function() {
+		this.preload = function(y) {
+			this.songs.push(y)
 			x.setAttribute("src", this.songs[i].URL)
-		}
+		};
 
 
 		this.play = function(){
 			document.getElementById("SongTitle").innerHTML = this.songs[i].SongTitle;
 			document.getElementById("ArtistName").innerHTML = this.songs[i].Artist;
 			document.getElementById("AlbumTitle").innerHTML = this.songs[i].AlbumTitle;
-			x.play();
+			x.currentTime = 0
+			x.play()
 		};
 
 
@@ -49,19 +46,13 @@ var Jukebox = function(){
 				i = 0
 				x.setAttribute("src", this.songs[i].URL)
 				x.currentTime = 0;
-				document.getElementById("SongTitle").innerHTML = this.songs[i].SongTitle;
-				document.getElementById("ArtistName").innerHTML = this.songs[i].Artist;
-				document.getElementById("AlbumTitle").innerHTML = this.songs[i].AlbumTitle;
-				x.play();
+				this.play()
 			}
 			else if(i < this.songs.length) {
 				i++ //This means i + 1. Var i will hold the value it's given here
 				x.setAttribute("src", this.songs[i].URL)
-				document.getElementById("SongTitle").innerHTML = this.songs[i].SongTitle;
-				document.getElementById("ArtistName").innerHTML = this.songs[i].Artist;
-				document.getElementById("AlbumTitle").innerHTML = this.songs[i].AlbumTitle;
-				x.play();
-				console.log(i)
+				x.currentTime = 0;
+				this.play()
 			}
 		}
 
@@ -71,19 +62,13 @@ var Jukebox = function(){
 				i-- //This means i - 1. Var i will hold the value it's given here
 				x.setAttribute("src", this.songs[i].URL)
 				x.currentTime = 0;
-				document.getElementById("SongTitle").innerHTML = this.songs[i].SongTitle;
-				document.getElementById("ArtistName").innerHTML = this.songs[i].Artist;
-				document.getElementById("AlbumTitle").innerHTML = this.songs[i].AlbumTitle;
-				x.play();
+				this.play()
 			}
 			else if (i == 0) {
 				i = this.songs.length - 1
 				x.setAttribute("src", this.songs[i].URL)
 				x.currentTime = 0;
-				document.getElementById("SongTitle").innerHTML = this.songs[i].SongTitle;
-				document.getElementById("ArtistName").innerHTML = this.songs[i].Artist;
-				document.getElementById("AlbumTitle").innerHTML = this.songs[i].AlbumTitle;
-				x.play();
+				this.play()
 			}
 		}
 
@@ -140,8 +125,6 @@ jukebox.preload(Suckers);
 jukebox.preload(Controlla);
 jukebox.preload(PoolsRemix);
 jukebox.preload(TenLovers);
-
-jukebox.load()
 
 
 
