@@ -1,46 +1,44 @@
 <!DOCTYPE html>
 <html>
 <head>
-	
-	<title>Jukebox</title>
+  <link rel="stylesheet" type="text/css" href="./Styles/Jukebox.css">
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,100' rel='stylesheet' type='text/css'>
+	<title>Greg's Jukebox</title>
 </head>
 <body> 
 
-      <h2 id="ArtistName"></h2>
-      <h1 id="SongTitle"></h1>
-      <h3 id="AlbumTitle"></h3>
+      <p id="SongTitle"> </p>
+      <p id="ArtistName"> </p>
 
-			<audio id="MyMusic" onended="jukebox.next()" src=" " type="audio/mp3">
-		  </audio>
+      <audio id="MyMusic" onended="jukebox.next()" src=" " type="audio/mp3">
+      </audio>
 
-     <button id="play" onclick="jukebox.play()" type="button">Play</button>
+      <button id="play" onclick="jukebox.play()" type="button">Play</button>
 
-     <!-- <button id="shuffle" onclick="jukebox.shuffle()" type="button">Shuffle</button> -->
+      <!-- <button id="shuffle" onclick="jukebox.shuffle()" type="button">Shuffle</button> -->
 
-     <button id="next" onclick="jukebox.next()" type="button">Next</button>
+      <button id="next" onclick="jukebox.next()" type="button">Next</button>
 
-     <button id="back" onclick="jukebox.back()" type="button">Back</button>
+      <button id="back" onclick="jukebox.back()" type="button">Back</button>
 
-    <button id="pause" onclick="jukebox.pause()" type="button">Pause</button> 
+      <button id="pause" onclick="jukebox.pause()" type="button">Pause</button> 
 
-    <button id="stop" onclick="jukebox.stop()" type="button">Stop</button> 
+      <button id="stop" onclick="jukebox.stop()" type="button">Stop</button> 
 
 
-    <form>
+    <form id="NewSongForm">
       Artist:<br>
       <input id="artistName" type="text" name="Artist">
       <br>
       Song Title:<br>
       <input id="songName" type="text" name="Song Title">
       <br>
-      Album Title:<br>
-      <input id="albumName" type="text" name="Album Title">
-      <br>
       URL:<br>
       <input id="newURL" type="text" name="URL">
       <button id="submitSong" onclick="jukebox.addSong()" type="button">Submit</button>
 
     </form>
+
 <script src="JS/Jukebox.js"></script>
 </body>
 </html>

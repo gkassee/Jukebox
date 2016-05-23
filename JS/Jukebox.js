@@ -1,8 +1,7 @@
 
-function Song(Artist, SongTitle, AlbumTitle, URL) {
+function Song(Artist, SongTitle, URL) {
 	this.Artist = Artist;
 	this.SongTitle = SongTitle;
-	this.AlbumTitle = AlbumTitle;
 	this.URL = URL;
 }
 
@@ -28,8 +27,6 @@ var Jukebox = function(){
 		this.play = function(){
 			document.getElementById("SongTitle").innerHTML = this.songs[i].SongTitle;
 			document.getElementById("ArtistName").innerHTML = this.songs[i].Artist;
-			document.getElementById("AlbumTitle").innerHTML = this.songs[i].AlbumTitle;
-			x.currentTime = 0
 			x.play()
 		};
 
@@ -44,14 +41,14 @@ var Jukebox = function(){
 		//Instinct made me want to use a loop for this, but that wasn't correct. 
 			if (i == this.songs.length - 1) {
 				i = 0
+				this.stop()
 				x.setAttribute("src", this.songs[i].URL)
-				x.currentTime = 0;
 				this.play()
 			}
 			else if(i < this.songs.length) {
 				i++ //This means i + 1. Var i will hold the value it's given here
+				this.stop()
 				x.setAttribute("src", this.songs[i].URL)
-				x.currentTime = 0;
 				this.play()
 			}
 		}
@@ -60,14 +57,14 @@ var Jukebox = function(){
 		this.back = function() {
 			if(i > 0) {
 				i-- //This means i - 1. Var i will hold the value it's given here
+				this.stop()
 				x.setAttribute("src", this.songs[i].URL)
-				x.currentTime = 0;
 				this.play()
 			}
 			else if (i == 0) {
+				this.stop()
 				i = this.songs.length - 1
 				x.setAttribute("src", this.songs[i].URL)
-				x.currentTime = 0;
 				this.play()
 			}
 		}
@@ -88,13 +85,12 @@ var Jukebox = function(){
 			var a
 			var b
 			var c
-			var d
 			a = document.getElementById("artistName").value
 			b = document.getElementById("songName").value
-			c = document.getElementById("albumName").value
-			d = document.getElementById("newURL").value
-			var x = new Song(a, b , c, d)
+			c = document.getElementById("newURL").value
+			var x = new Song(a, b , c)
 			this.songs.push(x)
+			document.getElementById("NewSongForm").reset()
 		}
 
 
@@ -108,13 +104,13 @@ var jukebox = new Jukebox();
 // ----- My Songs ----- \\
 
 
-var PoolsRemix = new Song("Glass Animals", "Pools (Roosevelt Remix)", "Glass Animals - Remixes", "./Music/Pools_Roosevelt_Remix.mp3")
-var Suckers = new Song("Ra Ra Riot", "Suckers", "Need Your Light", "./Music/Suckers.mp3")
-var GuiltTrip = new Song("Kanye West", "Guilt Trip", "Yeezus", "./Music/Guilt_Trip.mp3")
-var Controlla = new Song("Drake", "Controlla", "Views", "./Music/Controlla.mp3")
-var GenghisKhan = new Song("Miike Snow", "Genghis Khan", "iii", "./Music/Genghis_Khan.mp3")
-var TenLovers = new Song("The Black Keys", "10 Lovers", "Turn Blue", "./Music/10_Lovers.mp3")
-var MiracleAligner = new Song("The Last Shadow Puppets", "Miracle Aligner", "Everything You've Come To Expect", "./Music/Miracle_Aligner.mp3")
+var PoolsRemix = new Song("Glass Animals", "Pools (Roosevelt Remix)", "./Music/Pools_Roosevelt_Remix.mp3")
+var Suckers = new Song("Ra Ra Riot", "Suckers", "./Music/Suckers.mp3")
+var GuiltTrip = new Song("Kanye West", "Guilt Trip", "./Music/Guilt_Trip.mp3")
+var Controlla = new Song("Drake", "Controlla", "./Music/Controlla.mp3")
+var GenghisKhan = new Song("Miike Snow", "Genghis Khan", "./Music/Genghis_Khan.mp3")
+var TenLovers = new Song("The Black Keys", "10 Lovers", "./Music/10_Lovers.mp3")
+var MiracleAligner = new Song("The Last Shadow Puppets", "Miracle Aligner", "./Music/Miracle_Aligner.mp3")
 
 
 
