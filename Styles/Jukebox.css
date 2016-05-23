@@ -1,20 +1,170 @@
-p {
+/* BODY */
+
+li {
+	list-style: none;
+}
+
+
+
+
+/* VISUALS */
+
+#controls {
+	position: fixed;
+	z-index: 10;
+	top: 15%;
+	margin-left: 10px;
+}
+
+#infoWrapper {
+	position: absolute;
+	width: 100%;
+	overflow: auto;
+	padding-right: 40px;
 	font-family: 'Lato', sans-serif;
-	font-weight: 100;
-	color: #ff0066;
+	font-weight: 200;
+	color: #D72638;
+	text-align: center;
+	padding: 20px;
+	padding-top: 7%;
+	margin: 0px;
+	z-index: 1;
+}
+
+
+#SongTitle {
+	font-size: 7em;
+	text-transform: uppercase;
+	/*text-shadow: 6px 5px lightgrey;*/
+}
+
+
+#ArtistName {
+	font-size: 3em;
+	text-transform: uppercase;
+	color: grey;
+	font-family: 'Lato', sans-serif;
+	font-weight: 200;
 	text-align: center;
 	padding: 10px;
 	margin: 0px;
 }
 
 
-#SongTitle {
-	font-size: 6vw;
-	text-transform: uppercase;
+footer {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	padding: 10px;
+	background: #36C9C6;
 }
 
-#ArtistName {
-	font-size: 2em;
-	text-transform: uppercase;
+
+
+
+/* CONTROLS */
+
+#play {
+	border: 1px solid #474647;
+	border-radius: 100px;
+	width: 40px;
+	height: 40px;
+	color: #474647;
+	font-size: 25px;
+	padding: 7px;
+	padding-left: 8px;
+	padding-top: 6px;
+	/*margin-right: 7px;*/
+	margin-bottom: 7px;
 }
 
+
+#play:hover {
+	border: 1px solid #36C9C6;
+	color: #36C9C6;
+}
+
+#pause {
+	border: 1px solid #474647;
+	border-radius: 100px;
+	width: 40px;
+	height: 40px;
+	color: #474647;
+	font-size: 25px;
+	padding: 7px;
+	padding-left: 8px;
+	padding-top: 6px;
+	/*margin-right: 7px;*/
+	margin-bottom: 7px;
+}
+
+#pause:hover {
+	border: 1px solid #36C9C6;
+	color: #36C9C6;
+}
+
+#back {
+	border: 1px solid #474647;
+	border-radius: 100px;
+	width: 40px;
+	height: 40px;
+	color: #474647;
+	font-size: 25px;
+	padding-left: 3px;
+	padding-top: 7px;
+	margin-bottom: 7px;
+}
+
+#back:hover {
+	border: 1px solid #36C9C6;
+	color: #36C9C6;
+}
+
+#next {
+	border: 1px solid #474647;
+	border-radius: 100px;
+	width: 40px;
+	height: 40px;
+	color: #474647;
+	font-size: 25px;
+	padding-left: 10px;
+	padding-top: 7px;
+	margin-bottom: 7px;
+}
+
+#next:hover {
+	border: 1px solid #36C9C6;
+	color: #36C9C6;
+}
+
+#stop {
+	border: 1px solid #474647;
+	border-radius: 100px;
+	width: 40px;
+	height: 40px;
+	color: #474647;
+	font-size: 25px;
+	padding-left: 5.5px;
+	padding-top: 6.5px;
+	margin-bottom: 7px;
+}
+
+#stop:hover {
+	border: 1px solid #36C9C6;
+	color: #36C9C6;
+}
+
+
+@media all and (min-width: 1264px) { 
+
+	#infoWrapper {
+		padding: 20px;
+	}
+
+	#SongTitle {
+	font-size: 10em;
+	}
+
+	#ArtistName {
+
+	}

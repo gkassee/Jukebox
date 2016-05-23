@@ -3,29 +3,39 @@
 <head>
   <link rel="stylesheet" type="text/css" href="./Styles/Jukebox.css">
   <link href='https://fonts.googleapis.com/css?family=Lato:400,100' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 	<title>Greg's Jukebox</title>
 </head>
 <body> 
 
-      <p id="SongTitle"> </p>
-      <p id="ArtistName"> </p>
 
-      <audio id="MyMusic" onended="jukebox.next()" src=" " type="audio/mp3">
-      </audio>
+    
+    
+    
+   
+    <audio id="MyMusic" onended="jukebox.next()" src=" " type="audio/mp3">
+    </audio>
 
-      <button id="play" onclick="jukebox.play()" type="button">Play</button>
+    <div id="controls">
+      <span id="play" onclick="jukebox.play()" class="glyphicon glyphicon-play"></span>
+      <br class="break">
+      <span id="pause" onclick="jukebox.pause()" class="glyphicon glyphicon-pause"></span>
+      <br class="break">
+      <span id="back" onclick="jukebox.back()" class="glyphicon glyphicon-backward"></span>
+      <br class="break">
+      <span id="next" onclick="jukebox.next()" class="glyphicon glyphicon-forward"></span>
+      <br class="break">
+      <span id="stop" onclick="jukebox.stop()" class="glyphicon glyphicon-stop"></span>
+    </div>
 
-      <!-- <button id="shuffle" onclick="jukebox.shuffle()" type="button">Shuffle</button> -->
 
-      <button id="next" onclick="jukebox.next()" type="button">Next</button>
+    <div id="infoWrapper">
+      <div id="SongTitle"></div>
+      <div id="ArtistName"> </div>
+    </div>
+     
 
-      <button id="back" onclick="jukebox.back()" type="button">Back</button>
-
-      <button id="pause" onclick="jukebox.pause()" type="button">Pause</button> 
-
-      <button id="stop" onclick="jukebox.stop()" type="button">Stop</button> 
-
-
+    <footer>
     <form id="NewSongForm">
       Artist:<br>
       <input id="artistName" type="text" name="Artist">
@@ -38,6 +48,9 @@
       <button id="submitSong" onclick="jukebox.addSong()" type="button">Submit</button>
 
     </form>
+    </footer>
+
+    <div id="playlist"> </div>
 
 <script src="JS/Jukebox.js"></script>
 </body>

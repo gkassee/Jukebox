@@ -20,8 +20,12 @@ var Jukebox = function(){
 
 		this.preload = function(y) {
 			this.songs.push(y)
-			x.setAttribute("src", this.songs[i].URL)
 		};
+
+
+		this.load = function() {
+			x.setAttribute("src", this.songs[i].URL)
+		}
 
 
 		this.play = function(){
@@ -32,8 +36,8 @@ var Jukebox = function(){
 
 
 		// this.shuffle = function() {
-		// 	x.setAttribute("src", [Math.floor(Math.random() * this.songs.length.URL)])
-		// 	x.play();
+		// 	x.setAttribute("src", this.songs.random().URL)
+		// 	this.play();
 		// }
 
 
@@ -92,6 +96,20 @@ var Jukebox = function(){
 			this.songs.push(x)
 			document.getElementById("NewSongForm").reset()
 		}
+		
+
+		// this.playlist = function() {
+		// 		for (z=0; z<this.songs.length; z++) {
+		// 			var node = document.createElement("li")
+		// 			var node2 = document.createElement("li")
+		// 			var songnode = document.createTextNode(this.songs[z].SongTitle);
+		// 			var artistnode = document.createTextNode(this.songs[z].Artist);
+		// 			node.appendChild(songnode);
+		// 			node2.appendChild(artistnode);
+		// 			document.getElementById("playlist").appendChild(node);
+		// 			document.getElementById("playlist").appendChild(node2);
+		// 		}
+		// }
 
 
 }
@@ -121,6 +139,10 @@ jukebox.preload(Suckers);
 jukebox.preload(Controlla);
 jukebox.preload(PoolsRemix);
 jukebox.preload(TenLovers);
+
+jukebox.load();
+
+// jukebox.playlist();
 
 
 
