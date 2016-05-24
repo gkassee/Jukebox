@@ -38,8 +38,11 @@ var Jukebox = function(){
 
 
 		// this.shuffle = function() {
-		// 	x.setAttribute("src", this.songs.random().URL)
-		// 	this.play();
+		// 	x.setAttribute("src", this.songs[[Math.floor(Math.random() * this.songs.length)]].URL);
+		// 	document.getElementById("SongTitle").innerHTML = this.songs[i].SongTitle;
+		// 	document.getElementById("ArtistName").innerHTML = this.songs[i].Artist;
+		// 	document.getElementById("AlbumArt").setAttribute("src", this.songs[i].AlbumArtURL);
+		// 	x.play();
 		// }
 
 

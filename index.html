@@ -12,16 +12,18 @@
   <div id="form"> 
 
     <form id="NewSongForm">
-      Artist:<br>
+      <p id="headline">Add your own song below.</p>
+      <br>
+      artist:<br>
       <input id="artistName" type="text" name="Artist">
       <br>
-      Song Title:<br>
+      song title:<br>
       <input id="songName" type="text" name="Song Title">
       <br>
-      Album Art URL:<br>
+      album art url:<br>
       <input id="newAlbumArt" type="text" name="Album Art URL">
       <br>
-      URL:<br>
+      url:<br>
       <input id="newURL" type="text" name="URL">
       <button id="submitSong" onclick="jukebox.addSong()" type="button">Submit</button>
 
@@ -45,6 +47,8 @@
       <br>
       <span id="back" onclick="jukebox.back()" class="glyphicon glyphicon-backward"></span>
       <br>
+      <!-- <span id="shuffle" onclick="jukebox.shuffle()" class="glyphicon glyphicon-random"></span>
+      <br> -->
       <span id="stop" onclick="jukebox.stop()" class="glyphicon glyphicon-stop"></span>
       <br>
       <span id="upload" class="glyphicon glyphicon-upload"></span>

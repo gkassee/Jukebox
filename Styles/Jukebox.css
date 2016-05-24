@@ -93,14 +93,20 @@ li {
 
 
 #form {
+	font-family: 'Lato', sans-serif;
 	display: none;
 	position: fixed;
 	z-index: 2;
 	background-color: white;
-	padding: 70px;
-	margin-left: 37%;
-	margin-top: 13%;
+	padding: 40px 50px 50px 50px;
+	margin-left: 36%;
+	margin-top: 10%;
 	border-radius: 10px;
+}
+
+#headline {
+	font-size: 30px;
+	font-weight: 100;
 }
 
 
@@ -158,6 +164,23 @@ li {
 }
 
 #back:hover {
+	border: 1px solid #36C9C6;
+	color: #36C9C6;
+}
+
+#shuffle {
+	border: 1px solid #474647;
+	border-radius: 100px;
+	width: 40px;
+	height: 40px;
+	color: #474647;
+	font-size: 24px;
+	padding-left: 5px;
+	padding-top: 7px;
+	margin-bottom: 7px;
+}
+
+#shuffle:hover {
 	border: 1px solid #36C9C6;
 	color: #36C9C6;
 }
