@@ -11,31 +11,50 @@ li {
 
 #controls {
 	position: fixed;
-	z-index: 10;
-	top: 15%;
-	margin-left: 10px;
+	top: 20%;
+	padding: 10px;
+	padding-top: 50px;
+	padding-bottom: 50px;
+	opacity: 0.1;
 }
 
-#infoWrapper {
+
+#controls:hover {
+	opacity: 1;
+}
+
+
+#contentWrapper {
+	/*border: 1px black solid;*/
 	position: absolute;
-	width: 100%;
+	display: inline-block;
+	margin: 0 auto;
+	width: 1000px;
+	height: 500px;
+	margin-top: 8%;
+	margin-left: 15%;
+}
+
+
+#infoWrapper {
+	height: 400px;
+	width: 500px;
+	/*border: 1px black solid;*/
 	overflow: auto;
-	padding-right: 40px;
 	font-family: 'Lato', sans-serif;
-	font-weight: 200;
+	font-weight: 100;
 	color: #D72638;
 	text-align: center;
-	padding: 20px;
-	padding-top: 7%;
-	margin: 0px;
-	z-index: 1;
+	float: left;
+	padding-top: 20px;
+	padding-left: 20px;
 }
 
 
 #SongTitle {
-	font-size: 7em;
+	font-size: 5em;
 	text-transform: uppercase;
-	/*text-shadow: 6px 5px lightgrey;*/
+	text-align: left;
 }
 
 
@@ -44,19 +63,44 @@ li {
 	text-transform: uppercase;
 	color: grey;
 	font-family: 'Lato', sans-serif;
-	font-weight: 200;
-	text-align: center;
-	padding: 10px;
+	font-weight: 100;
+	text-align: left;
 	margin: 0px;
 }
 
 
-footer {
-	position: absolute;
-	bottom: 0;
+#AlbumArt {
+	height: 450px;
+	width: 450px;
+	float: right;
+	margin-right: 20px;
+	box-shadow: 7px 8px 10px grey;
+}
+
+
+#modal {
+	display: none;
+	z-index: 1;
+	position: fixed;
+	left: 0;
+	top: 0;
 	width: 100%;
-	padding: 10px;
-	background: #36C9C6;
+	height: 100%;	
+	background-color: black;
+	opacity: 0.8;
+	
+}
+
+
+#form {
+	display: none;
+	position: fixed;
+	z-index: 2;
+	background-color: #3f7e8a;
+	padding: 70px;
+	margin-left: 37%;
+	margin-top: 13%;
+	border-radius: 10px;
 }
 
 
@@ -74,7 +118,6 @@ footer {
 	padding: 7px;
 	padding-left: 8px;
 	padding-top: 6px;
-	/*margin-right: 7px;*/
 	margin-bottom: 7px;
 }
 
@@ -94,7 +137,6 @@ footer {
 	padding: 7px;
 	padding-left: 8px;
 	padding-top: 6px;
-	/*margin-right: 7px;*/
 	margin-bottom: 7px;
 }
 
@@ -145,7 +187,7 @@ footer {
 	color: #474647;
 	font-size: 25px;
 	padding-left: 5.5px;
-	padding-top: 6.5px;
+	padding-top: 6.3px;
 	margin-bottom: 7px;
 }
 
@@ -154,8 +196,21 @@ footer {
 	color: #36C9C6;
 }
 
+#upload {
+	width: 40px;
+	height: 40px;
+	color: #474647;
+	font-size: 40px;
+	padding-top: 7.46px;
+	margin-top: 20px;
+}
 
-@media all and (min-width: 1264px) { 
+#upload:hover {
+	color: #FF613A;
+}
+
+
+/*@media all and (min-width: 1264px) { 
 
 	#infoWrapper {
 		padding: 20px;
@@ -167,4 +222,4 @@ footer {
 
 	#ArtistName {
 
-	}
+	}*/

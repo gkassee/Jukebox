@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+  <script src="JS/jQuery.js"></script>
   <link rel="stylesheet" type="text/css" href="./Styles/Jukebox.css">
   <link href='https://fonts.googleapis.com/css?family=Lato:400,100' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
@@ -8,34 +10,8 @@
 </head>
 <body> 
 
+  <div id="form"> 
 
-    
-    
-    
-   
-    <audio id="MyMusic" onended="jukebox.next()" src=" " type="audio/mp3">
-    </audio>
-
-    <div id="controls">
-      <span id="play" onclick="jukebox.play()" class="glyphicon glyphicon-play"></span>
-      <br class="break">
-      <span id="pause" onclick="jukebox.pause()" class="glyphicon glyphicon-pause"></span>
-      <br class="break">
-      <span id="back" onclick="jukebox.back()" class="glyphicon glyphicon-backward"></span>
-      <br class="break">
-      <span id="next" onclick="jukebox.next()" class="glyphicon glyphicon-forward"></span>
-      <br class="break">
-      <span id="stop" onclick="jukebox.stop()" class="glyphicon glyphicon-stop"></span>
-    </div>
-
-
-    <div id="infoWrapper">
-      <div id="SongTitle"></div>
-      <div id="ArtistName"> </div>
-    </div>
-     
-
-    <footer>
     <form id="NewSongForm">
       Artist:<br>
       <input id="artistName" type="text" name="Artist">
@@ -43,12 +19,48 @@
       Song Title:<br>
       <input id="songName" type="text" name="Song Title">
       <br>
+      Album Art URL:<br>
+      <input id="newAlbumArt" type="text" name="Album Art URL">
+      <br>
       URL:<br>
       <input id="newURL" type="text" name="URL">
       <button id="submitSong" onclick="jukebox.addSong()" type="button">Submit</button>
 
     </form>
-    </footer>
+
+  </div>
+  
+  <div id="modal">
+  </div>
+
+   
+    <audio id="MyMusic" onended="jukebox.next()" src=" " type="audio/mp3">
+    </audio>
+
+    <div id="controls">
+      <span id="play" onclick="jukebox.play()" class="glyphicon glyphicon-play"></span>
+      <br>
+      <span id="pause" onclick="jukebox.pause()" class="glyphicon glyphicon-pause"></span>
+      <br>
+      <span id="back" onclick="jukebox.back()" class="glyphicon glyphicon-backward"></span>
+      <br>
+      <span id="next" onclick="jukebox.next()" class="glyphicon glyphicon-forward"></span>
+      <br>
+      <span id="stop" onclick="jukebox.stop()" class="glyphicon glyphicon-stop"></span>
+      <br>
+      <span id="upload" class="glyphicon glyphicon-upload"></span>
+    </div>
+
+    <div id="contentWrapper">
+
+      <div id="infoWrapper">
+        <div id="SongTitle">---</div>
+        <div id="ArtistName">---</div>
+      </div>
+        <img id="AlbumArt" src="http://static.tumblr.com/qmraazf/ps5mjrmim/unknown-album.png"> 
+    </div>
+
+    
 
     <div id="playlist"> </div>
 
