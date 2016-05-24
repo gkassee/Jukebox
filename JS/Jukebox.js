@@ -96,8 +96,14 @@ var Jukebox = function(){
 			c = document.getElementById("newAlbumArt").value
 			d = document.getElementById("newURL").value
 				if (c == "") {
-					c = "http://static.tumblr.com/qmraazf/ps5mjrmim/unknown-album.png"
+					var covers = ["./Images/ken.jpg", "./Images/dead.jpeg", "./Images/seagal.jpg", "./Images/dummy.jpg", "./Images/massage.jpg"]
+					c = covers[Math.floor(Math.random() * covers.length)]
 				}
+
+				if (d == "") {
+					d = "./Music/1.mp3"
+				}
+
 			var x = new Song(a, b , c, d)
 			this.songs.push(x)
 			document.getElementById("NewSongForm").reset()

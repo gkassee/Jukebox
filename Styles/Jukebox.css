@@ -15,7 +15,7 @@ li {
 	padding: 10px;
 	padding-top: 50px;
 	padding-bottom: 50px;
-	opacity: 0.1;
+	opacity: 0.2;
 }
 
 
@@ -96,7 +96,7 @@ li {
 	display: none;
 	position: fixed;
 	z-index: 2;
-	background-color: #3f7e8a;
+	background-color: white;
 	padding: 70px;
 	margin-left: 37%;
 	margin-top: 13%;
@@ -187,7 +187,7 @@ li {
 	color: #474647;
 	font-size: 25px;
 	padding-left: 5.5px;
-	padding-top: 6.3px;
+	padding-top: 6.4px;
 	margin-bottom: 7px;
 }
 
@@ -206,7 +206,7 @@ li {
 }
 
 #upload:hover {
-	color: #FF613A;
+	color: #FF9E6B;
 }
 
 
