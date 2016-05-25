@@ -23,6 +23,10 @@ li {
 	opacity: 1;
 }
 
+#controls2 {
+	display: none;
+}
+
 
 #contentWrapper {
 	/*border: 1px black solid;*/
@@ -77,10 +81,14 @@ li {
 	box-shadow: 7px 8px 10px grey;
 }
 
+#AlbumArt2 {
+	display: none;
+}
+
 
 #modal {
 	display: none;
-	z-index: 1;
+	z-index: 6;
 	position: fixed;
 	left: 0;
 	top: 0;
@@ -96,7 +104,7 @@ li {
 	font-family: 'Lato', sans-serif;
 	display: none;
 	position: fixed;
-	z-index: 2;
+	z-index: 7;
 	background-color: white;
 	padding: 40px 50px 50px 50px;
 	margin-left: 36%;
@@ -112,10 +120,7 @@ li {
 
 
 progress {
-	/*position: absolute;*/
 	width: 700px;
-	/*top: 88%;
-	left: 23%;*/
 }
 
 
@@ -253,16 +258,79 @@ footer {
 }
 
 
-/*@media all and (min-width: 1264px) { 
+@media all and (min-width: 319px) and (max-width: 401px) { 
 
-	#infoWrapper {
-		padding: 20px;
+	#controls {
+		display: none;
 	}
 
+	#controls2 {
+		position: relative;
+		display: block;
+		z-index: 10;
+		top: 450px;
+		margin-left: 22%;
+	}
+
+	#contentWrapper {
+		/*border: 1px black solid;*/
+		position: absolute;
+		width: 300px;
+		height: 300px;
+		margin-top: 8%;
+		margin-left: 12%;
+		word-wrap: break-word;
+	/*overflow: auto;*/
+		z-index: 5;
+	}
+
+	#AlbumArt {
+		display: none;
+	}
+
+	#AlbumArt2 {
+		display: block;
+		height: 300px;
+		width: 300px;
+		top: 31px;
+		margin-left: 12%;
+		box-shadow: none;
+		opacity: 0.1;
+		position: relative;
+		float: none;
+		z-index: -1;
+	}
+
+	#infoWrapper {
+		height: 300px;
+		width: 300px;
+		/*border: 1px black solid;*/
+		overflow: auto;
+		font-family: 'Lato', sans-serif;
+		font-weight: 100;
+		color: #D72638;
+		text-align: center;
+		padding-top: 20px;
+		padding-left: 20px;
+}
+
 	#SongTitle {
-	font-size: 10em;
+		font-weight: 400;
+		word-wrap: break-word;
+		font-size: 3em;
+		position: absolute;
+		/*color: black;*/
 	}
 
 	#ArtistName {
+		font-weight: 400;
+		font-size: 2em;
+    word-wrap: break-word;
+    position: relative;
+    margin-top: 190px;
+    /*color: black;*/
+	}
 
-	}*/
+	progress {
+		width: 370px;
+	}

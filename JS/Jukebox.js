@@ -33,6 +33,7 @@ var Jukebox = function(){
 			document.getElementById("SongTitle").innerHTML = this.songs[i].SongTitle;
 			document.getElementById("ArtistName").innerHTML = this.songs[i].Artist;
 			document.getElementById("AlbumArt").setAttribute("src", this.songs[i].AlbumArtURL);
+			document.getElementById("AlbumArt2").setAttribute("src", this.songs[i].AlbumArtURL);
 			x.play()
 		};
 
