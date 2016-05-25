@@ -10,6 +10,7 @@ $(document).ready(function(){
 		$("#form").hide();
 	});
 
+
 	// $("#next").click(function(){
  //    $("#contentWrapper").slideUp(500);
  //    $("#contentWrapper").slideDown(500);

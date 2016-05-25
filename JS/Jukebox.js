@@ -37,6 +37,13 @@ var Jukebox = function(){
 		};
 
 
+		this.updateProgress = function() {
+	    var progressbar = document.getElementById('seekbar');
+	    progressbar.value = (x.currentTime / x.duration);
+		};
+
+
+
 		// this.shuffle = function() {
 		// 	x.setAttribute("src", this.songs[[Math.floor(Math.random() * this.songs.length)]].URL);
 		// 	document.getElementById("SongTitle").innerHTML = this.songs[i].SongTitle;
@@ -113,19 +120,19 @@ var Jukebox = function(){
 		}
 
 
-		this.playlist = function() {
-				for (z=0; z<this.songs.length; z++) {
-					var node = document.createElement("li")
-					var node2 = document.createElement("li")
-					var songnode = document.createTextNode(this.songs[z].SongTitle);
-					// songnode.addClass('')
-					var artistnode = document.createTextNode(this.songs[z].Artist);
-					node.appendChild(songnode);
-					node2.appendChild(artistnode);
-					document.getElementById("playlist").appendChild(node);
-					document.getElementById("playlist").appendChild(node2);
-				}
-		}
+		// this.playlist = function() {
+		// 		for (z=0; z<this.songs.length; z++) {
+		// 			var node = document.createElement("li")
+		// 			var node2 = document.createElement("li")
+		// 			var songnode = document.createTextNode(this.songs[z].SongTitle);
+		// 			// songnode.addClass('')
+		// 			var artistnode = document.createTextNode(this.songs[z].Artist);
+		// 			node.appendChild(songnode);
+		// 			node2.appendChild(artistnode);
+		// 			document.getElementById("playlist").appendChild(node);
+		// 			document.getElementById("playlist").appendChild(node2);
+		// 		}
+		// }
 
 
 }
