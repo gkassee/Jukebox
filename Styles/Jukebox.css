@@ -258,7 +258,7 @@ footer {
 }
 
 
-@media all and (min-width: 319px) and (max-width: 401px) { 
+@media all and (min-width: 319px) and (max-width: 416px) { 
 
 	#controls {
 		display: none;
